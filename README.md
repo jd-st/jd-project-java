@@ -9,6 +9,8 @@
 
 The Jd Project Java SDK provides convenient access to the Jd Project REST API from applications written in Java.
 
+The Jd Project Java SDK is similar to the Jd Project Kotlin SDK but with minor differences that make it more ergonomic for use in Java, such as `Optional` instead of nullable values, `Stream` instead of `Sequence`, and `CompletableFuture` instead of suspend functions.
+
 It is generated with [Stainless](https://www.stainless.com/).
 
 <!-- x-release-please-start-version -->
