@@ -77,7 +77,7 @@ This can happen if you are either:
 
 Double-check that you are depending on compatible Jackson versions.
 
-See https://www.github.com/stainless-sdks/jd-project-java#jackson for more information.
+See https://www.github.com/jd-st/jd-project-java#jackson for more information.
         """
             .trimIndent()
     }
