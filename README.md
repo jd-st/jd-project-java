@@ -2,8 +2,8 @@
 
 <!-- x-release-please-start-version -->
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.jd_project.api/jd-project-java)](https://central.sonatype.com/artifact/com.jd_project.api/jd-project-java/0.3.0)
-[![javadoc](https://javadoc.io/badge2/com.jd_project.api/jd-project-java/0.3.0/javadoc.svg)](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.3.0)
+[![Maven Central](https://img.shields.io/maven-central/v/com.jd_project.api/jd-project-java)](https://central.sonatype.com/artifact/com.jd_project.api/jd-project-java/0.4.0)
+[![javadoc](https://javadoc.io/badge2/com.jd_project.api/jd-project-java/0.4.0/javadoc.svg)](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.4.0)
 
 <!-- x-release-please-end -->
 
@@ -15,7 +15,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 <!-- x-release-please-start-version -->
 
-Javadocs are available on [javadoc.io](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.3.0).
+Javadocs are available on [javadoc.io](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.4.0).
 
 <!-- x-release-please-end -->
 
@@ -26,7 +26,7 @@ Javadocs are available on [javadoc.io](https://javadoc.io/doc/com.jd_project.api
 ### Gradle
 
 ```kotlin
-implementation("com.jd_project.api:jd-project-java:0.3.0")
+implementation("com.jd_project.api:jd-project-java:0.4.0")
 ```
 
 ### Maven
@@ -35,7 +35,7 @@ implementation("com.jd_project.api:jd-project-java:0.3.0")
 <dependency>
   <groupId>com.jd_project.api</groupId>
   <artifactId>jd-project-java</artifactId>
-  <version>0.3.0</version>
+  <version>0.4.0</version>
 </dependency>
 ```
 
@@ -51,13 +51,13 @@ This library requires Java 8 or later.
 import com.jd_project.api.client.JdProjectClient;
 import com.jd_project.api.client.okhttp.JdProjectOkHttpClient;
 import com.jd_project.api.models.Order;
-import com.jd_project.api.models.st00re.orders.OrderCreateParams;
+import com.jd_project.api.models.st000re.orders.OrderCreateParams;
 
 // Configures using the `jdproject.petstoreApiKey` and `jdproject.baseUrl` system properties
 // Or configures using the `PETSTORE_API_KEY` and `JD_PROJECT_BASE_URL` environment variables
 JdProjectClient client = JdProjectOkHttpClient.fromEnv();
 
-Order order = client.st00re().orders().create();
+Order order = client.st000re().orders().create();
 ```
 
 ## Client configuration
@@ -130,7 +130,7 @@ The `withOptions()` method does not affect the original client or service.
 
 To send a request to the Jd Project API, build an instance of some `Params` class and pass it to the corresponding client method. When the response is received, it will be deserialized into an instance of a Java class.
 
-For example, `client.st00re().orders().create(...)` should be called with an instance of `OrderCreateParams`, and it will return an instance of `Order`.
+For example, `client.st000re().orders().create(...)` should be called with an instance of `OrderCreateParams`, and it will return an instance of `Order`.
 
 ## Immutability
 
@@ -148,14 +148,14 @@ The default client is synchronous. To switch to asynchronous execution, call the
 import com.jd_project.api.client.JdProjectClient;
 import com.jd_project.api.client.okhttp.JdProjectOkHttpClient;
 import com.jd_project.api.models.Order;
-import com.jd_project.api.models.st00re.orders.OrderCreateParams;
+import com.jd_project.api.models.st000re.orders.OrderCreateParams;
 import java.util.concurrent.CompletableFuture;
 
 // Configures using the `jdproject.petstoreApiKey` and `jdproject.baseUrl` system properties
 // Or configures using the `PETSTORE_API_KEY` and `JD_PROJECT_BASE_URL` environment variables
 JdProjectClient client = JdProjectOkHttpClient.fromEnv();
 
-CompletableFuture<Order> order = client.async().st00re().orders().create();
+CompletableFuture<Order> order = client.async().st000re().orders().create();
 ```
 
 Or create an asynchronous client from the beginning:
@@ -164,14 +164,14 @@ Or create an asynchronous client from the beginning:
 import com.jd_project.api.client.JdProjectClientAsync;
 import com.jd_project.api.client.okhttp.JdProjectOkHttpClientAsync;
 import com.jd_project.api.models.Order;
-import com.jd_project.api.models.st00re.orders.OrderCreateParams;
+import com.jd_project.api.models.st000re.orders.OrderCreateParams;
 import java.util.concurrent.CompletableFuture;
 
 // Configures using the `jdproject.petstoreApiKey` and `jdproject.baseUrl` system properties
 // Or configures using the `PETSTORE_API_KEY` and `JD_PROJECT_BASE_URL` environment variables
 JdProjectClientAsync client = JdProjectOkHttpClientAsync.fromEnv();
 
-CompletableFuture<Order> order = client.st00re().orders().create();
+CompletableFuture<Order> order = client.st000re().orders().create();
 ```
 
 The asynchronous client supports the same options as the synchronous one, except most methods return `CompletableFuture`s.
@@ -185,10 +185,10 @@ To access this data, prefix any HTTP method call on a client or service with `wi
 ```java
 import com.jd_project.api.core.http.Headers;
 import com.jd_project.api.core.http.HttpResponseFor;
-import com.jd_project.api.models.st00re.St00reListInventoryParams;
-import com.jd_project.api.models.st00re.St00reListInventoryResponse;
+import com.jd_project.api.models.st000re.St000reListInventoryParams;
+import com.jd_project.api.models.st000re.St000reListInventoryResponse;
 
-HttpResponseFor<St00reListInventoryResponse> response = client.st00re().withRawResponse().listInventory();
+HttpResponseFor<St000reListInventoryResponse> response = client.st000re().withRawResponse().listInventory();
 
 int statusCode = response.statusCode();
 Headers headers = response.headers();
@@ -197,9 +197,9 @@ Headers headers = response.headers();
 You can still deserialize the response into an instance of a Java class if needed:
 
 ```java
-import com.jd_project.api.models.st00re.St00reListInventoryResponse;
+import com.jd_project.api.models.st000re.St000reListInventoryResponse;
 
-St00reListInventoryResponse parsedResponse = response.parse();
+St000reListInventoryResponse parsedResponse = response.parse();
 ```
 
 ## Error handling
@@ -297,9 +297,9 @@ Requests time out after 1 minute by default.
 To set a custom timeout, configure the method call using the `timeout` method:
 
 ```java
-import com.jd_project.api.models.st00re.St00reListInventoryResponse;
+import com.jd_project.api.models.st000re.St000reListInventoryResponse;
 
-St00reListInventoryResponse response = client.st00re().listInventory(RequestOptions.builder().timeout(Duration.ofSeconds(30)).build());
+St000reListInventoryResponse response = client.st000re().listInventory(RequestOptions.builder().timeout(Duration.ofSeconds(30)).build());
 ```
 
 Or configure the default for all method calls at the client level:
@@ -402,7 +402,7 @@ To set undocumented parameters, call the `putAdditionalHeader`, `putAdditionalQu
 
 ```java
 import com.jd_project.api.core.JsonValue;
-import com.jd_project.api.models.st00re.orders.OrderCreateParams;
+import com.jd_project.api.models.st000re.orders.OrderCreateParams;
 
 OrderCreateParams params = OrderCreateParams.builder()
     .putAdditionalHeader("Secret-Header", "42")
@@ -416,7 +416,7 @@ These can be accessed on the built object later using the `_additionalHeaders()`
 To set a documented parameter or property to an undocumented or not yet supported _value_, pass a [`JsonValue`](jd-project-java-core/src/main/kotlin/com/jd_project/api/core/Values.kt) object to its setter:
 
 ```java
-import com.jd_project.api.models.st00re.orders.OrderCreateParams;
+import com.jd_project.api.models.st000re.orders.OrderCreateParams;
 
 OrderCreateParams params = OrderCreateParams.builder().build();
 ```
@@ -468,7 +468,7 @@ To forcibly omit a required parameter or property, pass [`JsonMissing`](jd-proje
 import com.jd_project.api.core.JsonMissing;
 import com.jd_project.api.models.pets.Pet;
 import com.jd_project.api.models.pets.PetCreateParams;
-import com.jd_project.api.models.st00re.orders.OrderCreateParams;
+import com.jd_project.api.models.st000re.orders.OrderCreateParams;
 
 OrderCreateParams params = PetCreateParams.builder()
     .pet(Pet.builder()
@@ -487,7 +487,7 @@ To access undocumented response properties, call the `_additionalProperties()` m
 import com.jd_project.api.core.JsonValue;
 import java.util.Map;
 
-Map<String, JsonValue> additionalProperties = client.st00re().orders().create(params)._additionalProperties();
+Map<String, JsonValue> additionalProperties = client.st000re().orders().create(params)._additionalProperties();
 JsonValue secretPropertyValue = additionalProperties.get("secretProperty");
 
 String result = secretPropertyValue.accept(new JsonValue.Visitor<>() {
@@ -517,7 +517,7 @@ To access a property's raw JSON value, which may be undocumented, call its `_` p
 import com.jd_project.api.core.JsonField;
 import java.util.Optional;
 
-JsonField<Object> field = client.st00re().orders().create(params)._field();
+JsonField<Object> field = client.st000re().orders().create(params)._field();
 
 if (field.isMissing()) {
   // The property is absent from the JSON response
@@ -544,7 +544,7 @@ If you would prefer to check that the response is completely well-typed upfront,
 ```java
 import com.jd_project.api.models.Order;
 
-Order order = client.st00re().orders().create(params).validate();
+Order order = client.st000re().orders().create(params).validate();
 ```
 
 Or configure the method call to validate the response using the `responseValidation` method:
@@ -552,7 +552,7 @@ Or configure the method call to validate the response using the `responseValidat
 ```java
 import com.jd_project.api.models.Order;
 
-Order order = client.st00re().orders().create(RequestOptions.builder().responseValidation(true).build());
+Order order = client.st000re().orders().create(RequestOptions.builder().responseValidation(true).build());
 ```
 
 Or configure the default for all method calls at the client level:

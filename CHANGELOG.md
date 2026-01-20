@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 (2026-01-20)
+
+Full Changelog: [v0.3.0...v0.4.0](https://github.com/jd-st/jd-project-java/compare/v0.3.0...v0.4.0)
+
+### Features
+
+* **api:** api update ([4bb68a1](https://github.com/jd-st/jd-project-java/commit/4bb68a12916910158b68138f143efc42f6e3844e))
+
 ## 0.3.0 (2026-01-20)
 
 Full Changelog: [v0.2.1...v0.3.0](https://github.com/jd-st/jd-project-java/compare/v0.2.1...v0.3.0)
