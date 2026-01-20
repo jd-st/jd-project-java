@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.3.0 (2026-01-20)
+
+Full Changelog: [v0.2.1...v0.3.0](https://github.com/jd-st/jd-project-java/compare/v0.2.1...v0.3.0)
+
+### Features
+
+* **api:** manual updates ([b28f477](https://github.com/jd-st/jd-project-java/commit/b28f47717c156db9c000b6062e6defa53ec76655))
+
+
+### Chores
+
+* **ci:** upgrade `actions/setup-java` ([48739b3](https://github.com/jd-st/jd-project-java/commit/48739b3e6ac8da2b93f8a46ff7c0a87e0177334a))
+
 ## 0.2.1 (2026-01-17)
 
 Full Changelog: [v0.2.0...v0.2.1](https://github.com/jd-st/jd-project-java/compare/v0.2.0...v0.2.1)
