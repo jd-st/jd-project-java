@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 
 @ExtendWith(TestServerExtension::class)
-internal class St00reServiceAsyncTest {
+internal class St000reServiceAsyncTest {
 
     @Disabled("Prism tests are disabled")
     @Test
@@ -19,9 +19,9 @@ internal class St00reServiceAsyncTest {
                 .baseUrl(TestServerExtension.BASE_URL)
                 .apiKey("My API Key")
                 .build()
-        val st00reServiceAsync = client.st00re()
+        val st000reServiceAsync = client.st000re()
 
-        val responseFuture = st00reServiceAsync.listInventory()
+        val responseFuture = st000reServiceAsync.listInventory()
 
         val response = responseFuture.get()
         response.validate()

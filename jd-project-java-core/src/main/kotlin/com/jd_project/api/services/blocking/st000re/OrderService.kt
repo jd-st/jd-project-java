@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package com.jd_project.api.services.blocking.st00re
+package com.jd_project.api.services.blocking.st000re
 
 import com.google.errorprone.annotations.MustBeClosed
 import com.jd_project.api.core.ClientOptions
@@ -8,9 +8,9 @@ import com.jd_project.api.core.RequestOptions
 import com.jd_project.api.core.http.HttpResponse
 import com.jd_project.api.core.http.HttpResponseFor
 import com.jd_project.api.models.Order
-import com.jd_project.api.models.st00re.orders.OrderCreateParams
-import com.jd_project.api.models.st00re.orders.OrderDeleteParams
-import com.jd_project.api.models.st00re.orders.OrderRetrieveParams
+import com.jd_project.api.models.st000re.orders.OrderCreateParams
+import com.jd_project.api.models.st000re.orders.OrderDeleteParams
+import com.jd_project.api.models.st000re.orders.OrderRetrieveParams
 import java.util.function.Consumer
 
 interface OrderService {
@@ -119,7 +119,7 @@ interface OrderService {
         fun withOptions(modifier: Consumer<ClientOptions.Builder>): OrderService.WithRawResponse
 
         /**
-         * Returns a raw HTTP response for `post /st00re/order`, but is otherwise the same as
+         * Returns a raw HTTP response for `post /st000re/order`, but is otherwise the same as
          * [OrderService.create].
          */
         @MustBeClosed fun create(): HttpResponseFor<Order> = create(OrderCreateParams.none())
@@ -154,7 +154,7 @@ interface OrderService {
             create(OrderCreateParams.none(), requestOptions)
 
         /**
-         * Returns a raw HTTP response for `get /st00re/order/{orderId}`, but is otherwise the same
+         * Returns a raw HTTP response for `get /st000re/order/{orderId}`, but is otherwise the same
          * as [OrderService.retrieve].
          */
         @MustBeClosed
@@ -195,7 +195,7 @@ interface OrderService {
             retrieve(orderId, OrderRetrieveParams.none(), requestOptions)
 
         /**
-         * Returns a raw HTTP response for `delete /st00re/order/{orderId}`, but is otherwise the
+         * Returns a raw HTTP response for `delete /st000re/order/{orderId}`, but is otherwise the
          * same as [OrderService.delete].
          */
         @MustBeClosed

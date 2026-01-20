@@ -1,18 +1,26 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package com.jd_project.api.models.st00re
+package com.jd_project.api.models.st000re.orders
 
 import com.jd_project.api.core.Params
 import com.jd_project.api.core.http.Headers
 import com.jd_project.api.core.http.QueryParams
 import java.util.Objects
+import java.util.Optional
+import kotlin.jvm.optionals.getOrNull
 
-/** Returns a map of status codes to quantities */
-class St00reListInventoryParams
+/**
+ * For valid response try integer IDs with value <= 5 or > 10. Other values will generate
+ * exceptions.
+ */
+class OrderRetrieveParams
 private constructor(
+    private val orderId: Long?,
     private val additionalHeaders: Headers,
     private val additionalQueryParams: QueryParams,
 ) : Params {
+
+    fun orderId(): Optional<Long> = Optional.ofNullable(orderId)
 
     /** Additional headers to send with the request. */
     fun _additionalHeaders(): Headers = additionalHeaders
@@ -24,25 +32,37 @@ private constructor(
 
     companion object {
 
-        @JvmStatic fun none(): St00reListInventoryParams = builder().build()
+        @JvmStatic fun none(): OrderRetrieveParams = builder().build()
 
-        /**
-         * Returns a mutable builder for constructing an instance of [St00reListInventoryParams].
-         */
+        /** Returns a mutable builder for constructing an instance of [OrderRetrieveParams]. */
         @JvmStatic fun builder() = Builder()
     }
 
-    /** A builder for [St00reListInventoryParams]. */
+    /** A builder for [OrderRetrieveParams]. */
     class Builder internal constructor() {
 
+        private var orderId: Long? = null
         private var additionalHeaders: Headers.Builder = Headers.builder()
         private var additionalQueryParams: QueryParams.Builder = QueryParams.builder()
 
         @JvmSynthetic
-        internal fun from(st00reListInventoryParams: St00reListInventoryParams) = apply {
-            additionalHeaders = st00reListInventoryParams.additionalHeaders.toBuilder()
-            additionalQueryParams = st00reListInventoryParams.additionalQueryParams.toBuilder()
+        internal fun from(orderRetrieveParams: OrderRetrieveParams) = apply {
+            orderId = orderRetrieveParams.orderId
+            additionalHeaders = orderRetrieveParams.additionalHeaders.toBuilder()
+            additionalQueryParams = orderRetrieveParams.additionalQueryParams.toBuilder()
         }
+
+        fun orderId(orderId: Long?) = apply { this.orderId = orderId }
+
+        /**
+         * Alias for [Builder.orderId].
+         *
+         * This unboxed primitive overload exists for backwards compatibility.
+         */
+        fun orderId(orderId: Long) = orderId(orderId as Long?)
+
+        /** Alias for calling [Builder.orderId] with `orderId.orElse(null)`. */
+        fun orderId(orderId: Optional<Long>) = orderId(orderId.getOrNull())
 
         fun additionalHeaders(additionalHeaders: Headers) = apply {
             this.additionalHeaders.clear()
@@ -143,13 +163,19 @@ private constructor(
         }
 
         /**
-         * Returns an immutable instance of [St00reListInventoryParams].
+         * Returns an immutable instance of [OrderRetrieveParams].
          *
          * Further updates to this [Builder] will not mutate the returned instance.
          */
-        fun build(): St00reListInventoryParams =
-            St00reListInventoryParams(additionalHeaders.build(), additionalQueryParams.build())
+        fun build(): OrderRetrieveParams =
+            OrderRetrieveParams(orderId, additionalHeaders.build(), additionalQueryParams.build())
     }
+
+    fun _pathParam(index: Int): String =
+        when (index) {
+            0 -> orderId?.toString() ?: ""
+            else -> ""
+        }
 
     override fun _headers(): Headers = additionalHeaders
 
@@ -160,13 +186,14 @@ private constructor(
             return true
         }
 
-        return other is St00reListInventoryParams &&
+        return other is OrderRetrieveParams &&
+            orderId == other.orderId &&
             additionalHeaders == other.additionalHeaders &&
             additionalQueryParams == other.additionalQueryParams
     }
 
-    override fun hashCode(): Int = Objects.hash(additionalHeaders, additionalQueryParams)
+    override fun hashCode(): Int = Objects.hash(orderId, additionalHeaders, additionalQueryParams)
 
     override fun toString() =
-        "St00reListInventoryParams{additionalHeaders=$additionalHeaders, additionalQueryParams=$additionalQueryParams}"
+        "OrderRetrieveParams{orderId=$orderId, additionalHeaders=$additionalHeaders, additionalQueryParams=$additionalQueryParams}"
 }
