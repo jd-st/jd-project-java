@@ -14,38 +14,38 @@ import com.jd_project.api.core.http.HttpResponse.Handler
 import com.jd_project.api.core.http.HttpResponseFor
 import com.jd_project.api.core.http.parseable
 import com.jd_project.api.core.prepareAsync
-import com.jd_project.api.models.st0re.St0reListInventoryParams
-import com.jd_project.api.models.st0re.St0reListInventoryResponse
-import com.jd_project.api.services.async.st0re.OrderServiceAsync
-import com.jd_project.api.services.async.st0re.OrderServiceAsyncImpl
+import com.jd_project.api.models.st00re.St00reListInventoryParams
+import com.jd_project.api.models.st00re.St00reListInventoryResponse
+import com.jd_project.api.services.async.st00re.OrderServiceAsync
+import com.jd_project.api.services.async.st00re.OrderServiceAsyncImpl
 import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 
-class St0reServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
-    St0reServiceAsync {
+class St00reServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
+    St00reServiceAsync {
 
-    private val withRawResponse: St0reServiceAsync.WithRawResponse by lazy {
+    private val withRawResponse: St00reServiceAsync.WithRawResponse by lazy {
         WithRawResponseImpl(clientOptions)
     }
 
     private val orders: OrderServiceAsync by lazy { OrderServiceAsyncImpl(clientOptions) }
 
-    override fun withRawResponse(): St0reServiceAsync.WithRawResponse = withRawResponse
+    override fun withRawResponse(): St00reServiceAsync.WithRawResponse = withRawResponse
 
-    override fun withOptions(modifier: Consumer<ClientOptions.Builder>): St0reServiceAsync =
-        St0reServiceAsyncImpl(clientOptions.toBuilder().apply(modifier::accept).build())
+    override fun withOptions(modifier: Consumer<ClientOptions.Builder>): St00reServiceAsync =
+        St00reServiceAsyncImpl(clientOptions.toBuilder().apply(modifier::accept).build())
 
     override fun orders(): OrderServiceAsync = orders
 
     override fun listInventory(
-        params: St0reListInventoryParams,
+        params: St00reListInventoryParams,
         requestOptions: RequestOptions,
-    ): CompletableFuture<St0reListInventoryResponse> =
-        // get /st0re/inventory
+    ): CompletableFuture<St00reListInventoryResponse> =
+        // get /st00re/inventory
         withRawResponse().listInventory(params, requestOptions).thenApply { it.parse() }
 
     class WithRawResponseImpl internal constructor(private val clientOptions: ClientOptions) :
-        St0reServiceAsync.WithRawResponse {
+        St00reServiceAsync.WithRawResponse {
 
         private val errorHandler: Handler<HttpResponse> =
             errorHandler(errorBodyHandler(clientOptions.jsonMapper))
@@ -56,25 +56,25 @@ class St0reServiceAsyncImpl internal constructor(private val clientOptions: Clie
 
         override fun withOptions(
             modifier: Consumer<ClientOptions.Builder>
-        ): St0reServiceAsync.WithRawResponse =
-            St0reServiceAsyncImpl.WithRawResponseImpl(
+        ): St00reServiceAsync.WithRawResponse =
+            St00reServiceAsyncImpl.WithRawResponseImpl(
                 clientOptions.toBuilder().apply(modifier::accept).build()
             )
 
         override fun orders(): OrderServiceAsync.WithRawResponse = orders
 
-        private val listInventoryHandler: Handler<St0reListInventoryResponse> =
-            jsonHandler<St0reListInventoryResponse>(clientOptions.jsonMapper)
+        private val listInventoryHandler: Handler<St00reListInventoryResponse> =
+            jsonHandler<St00reListInventoryResponse>(clientOptions.jsonMapper)
 
         override fun listInventory(
-            params: St0reListInventoryParams,
+            params: St00reListInventoryParams,
             requestOptions: RequestOptions,
-        ): CompletableFuture<HttpResponseFor<St0reListInventoryResponse>> {
+        ): CompletableFuture<HttpResponseFor<St00reListInventoryResponse>> {
             val request =
                 HttpRequest.builder()
                     .method(HttpMethod.GET)
                     .baseUrl(clientOptions.baseUrl())
-                    .addPathSegments("st0re", "inventory")
+                    .addPathSegments("st00re", "inventory")
                     .build()
                     .prepareAsync(clientOptions, params)
             val requestOptions = requestOptions.applyDefaults(RequestOptions.from(clientOptions))

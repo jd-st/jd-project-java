@@ -49,7 +49,7 @@ internal class ProGuardCompatibilityTest {
 
         assertThat(client).isNotNull()
         assertThat(client.pets()).isNotNull()
-        assertThat(client.st0re()).isNotNull()
+        assertThat(client.st00re()).isNotNull()
         assertThat(client.users()).isNotNull()
     }
 

@@ -14,37 +14,37 @@ import com.jd_project.api.core.http.HttpResponse.Handler
 import com.jd_project.api.core.http.HttpResponseFor
 import com.jd_project.api.core.http.parseable
 import com.jd_project.api.core.prepare
-import com.jd_project.api.models.st0re.St0reListInventoryParams
-import com.jd_project.api.models.st0re.St0reListInventoryResponse
-import com.jd_project.api.services.blocking.st0re.OrderService
-import com.jd_project.api.services.blocking.st0re.OrderServiceImpl
+import com.jd_project.api.models.st00re.St00reListInventoryParams
+import com.jd_project.api.models.st00re.St00reListInventoryResponse
+import com.jd_project.api.services.blocking.st00re.OrderService
+import com.jd_project.api.services.blocking.st00re.OrderServiceImpl
 import java.util.function.Consumer
 
-class St0reServiceImpl internal constructor(private val clientOptions: ClientOptions) :
-    St0reService {
+class St00reServiceImpl internal constructor(private val clientOptions: ClientOptions) :
+    St00reService {
 
-    private val withRawResponse: St0reService.WithRawResponse by lazy {
+    private val withRawResponse: St00reService.WithRawResponse by lazy {
         WithRawResponseImpl(clientOptions)
     }
 
     private val orders: OrderService by lazy { OrderServiceImpl(clientOptions) }
 
-    override fun withRawResponse(): St0reService.WithRawResponse = withRawResponse
+    override fun withRawResponse(): St00reService.WithRawResponse = withRawResponse
 
-    override fun withOptions(modifier: Consumer<ClientOptions.Builder>): St0reService =
-        St0reServiceImpl(clientOptions.toBuilder().apply(modifier::accept).build())
+    override fun withOptions(modifier: Consumer<ClientOptions.Builder>): St00reService =
+        St00reServiceImpl(clientOptions.toBuilder().apply(modifier::accept).build())
 
     override fun orders(): OrderService = orders
 
     override fun listInventory(
-        params: St0reListInventoryParams,
+        params: St00reListInventoryParams,
         requestOptions: RequestOptions,
-    ): St0reListInventoryResponse =
-        // get /st0re/inventory
+    ): St00reListInventoryResponse =
+        // get /st00re/inventory
         withRawResponse().listInventory(params, requestOptions).parse()
 
     class WithRawResponseImpl internal constructor(private val clientOptions: ClientOptions) :
-        St0reService.WithRawResponse {
+        St00reService.WithRawResponse {
 
         private val errorHandler: Handler<HttpResponse> =
             errorHandler(errorBodyHandler(clientOptions.jsonMapper))
@@ -55,25 +55,25 @@ class St0reServiceImpl internal constructor(private val clientOptions: ClientOpt
 
         override fun withOptions(
             modifier: Consumer<ClientOptions.Builder>
-        ): St0reService.WithRawResponse =
-            St0reServiceImpl.WithRawResponseImpl(
+        ): St00reService.WithRawResponse =
+            St00reServiceImpl.WithRawResponseImpl(
                 clientOptions.toBuilder().apply(modifier::accept).build()
             )
 
         override fun orders(): OrderService.WithRawResponse = orders
 
-        private val listInventoryHandler: Handler<St0reListInventoryResponse> =
-            jsonHandler<St0reListInventoryResponse>(clientOptions.jsonMapper)
+        private val listInventoryHandler: Handler<St00reListInventoryResponse> =
+            jsonHandler<St00reListInventoryResponse>(clientOptions.jsonMapper)
 
         override fun listInventory(
-            params: St0reListInventoryParams,
+            params: St00reListInventoryParams,
             requestOptions: RequestOptions,
-        ): HttpResponseFor<St0reListInventoryResponse> {
+        ): HttpResponseFor<St00reListInventoryResponse> {
             val request =
                 HttpRequest.builder()
                     .method(HttpMethod.GET)
                     .baseUrl(clientOptions.baseUrl())
-                    .addPathSegments("st0re", "inventory")
+                    .addPathSegments("st00re", "inventory")
                     .build()
                     .prepare(clientOptions, params)
             val requestOptions = requestOptions.applyDefaults(RequestOptions.from(clientOptions))
