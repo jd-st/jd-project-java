@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package com.jd_project.api.models.st0re
+package com.jd_project.api.models.st00re
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter
 import com.fasterxml.jackson.annotation.JsonCreator
@@ -10,7 +10,7 @@ import com.jd_project.api.core.toImmutable
 import com.jd_project.api.errors.JdProjectInvalidDataException
 import java.util.Objects
 
-class St0reListInventoryResponse
+class St00reListInventoryResponse
 @JsonCreator
 private constructor(
     @com.fasterxml.jackson.annotation.JsonValue
@@ -26,19 +26,19 @@ private constructor(
     companion object {
 
         /**
-         * Returns a mutable builder for constructing an instance of [St0reListInventoryResponse].
+         * Returns a mutable builder for constructing an instance of [St00reListInventoryResponse].
          */
         @JvmStatic fun builder() = Builder()
     }
 
-    /** A builder for [St0reListInventoryResponse]. */
+    /** A builder for [St00reListInventoryResponse]. */
     class Builder internal constructor() {
 
         private var additionalProperties: MutableMap<String, JsonValue> = mutableMapOf()
 
         @JvmSynthetic
-        internal fun from(st0reListInventoryResponse: St0reListInventoryResponse) = apply {
-            additionalProperties = st0reListInventoryResponse.additionalProperties.toMutableMap()
+        internal fun from(st00reListInventoryResponse: St00reListInventoryResponse) = apply {
+            additionalProperties = st00reListInventoryResponse.additionalProperties.toMutableMap()
         }
 
         fun additionalProperties(additionalProperties: Map<String, JsonValue>) = apply {
@@ -61,17 +61,17 @@ private constructor(
         }
 
         /**
-         * Returns an immutable instance of [St0reListInventoryResponse].
+         * Returns an immutable instance of [St00reListInventoryResponse].
          *
          * Further updates to this [Builder] will not mutate the returned instance.
          */
-        fun build(): St0reListInventoryResponse =
-            St0reListInventoryResponse(additionalProperties.toImmutable())
+        fun build(): St00reListInventoryResponse =
+            St00reListInventoryResponse(additionalProperties.toImmutable())
     }
 
     private var validated: Boolean = false
 
-    fun validate(): St0reListInventoryResponse = apply {
+    fun validate(): St00reListInventoryResponse = apply {
         if (validated) {
             return@apply
         }
@@ -101,7 +101,7 @@ private constructor(
             return true
         }
 
-        return other is St0reListInventoryResponse &&
+        return other is St00reListInventoryResponse &&
             additionalProperties == other.additionalProperties
     }
 
@@ -110,5 +110,5 @@ private constructor(
     override fun hashCode(): Int = hashCode
 
     override fun toString() =
-        "St0reListInventoryResponse{additionalProperties=$additionalProperties}"
+        "St00reListInventoryResponse{additionalProperties=$additionalProperties}"
 }

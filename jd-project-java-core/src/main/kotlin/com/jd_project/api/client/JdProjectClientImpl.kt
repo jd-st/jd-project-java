@@ -6,8 +6,8 @@ import com.jd_project.api.core.ClientOptions
 import com.jd_project.api.core.getPackageVersion
 import com.jd_project.api.services.blocking.PetService
 import com.jd_project.api.services.blocking.PetServiceImpl
-import com.jd_project.api.services.blocking.St0reService
-import com.jd_project.api.services.blocking.St0reServiceImpl
+import com.jd_project.api.services.blocking.St00reService
+import com.jd_project.api.services.blocking.St00reServiceImpl
 import com.jd_project.api.services.blocking.UserService
 import com.jd_project.api.services.blocking.UserServiceImpl
 import java.util.function.Consumer
@@ -31,7 +31,7 @@ class JdProjectClientImpl(private val clientOptions: ClientOptions) : JdProjectC
 
     private val pets: PetService by lazy { PetServiceImpl(clientOptionsWithUserAgent) }
 
-    private val st0re: St0reService by lazy { St0reServiceImpl(clientOptionsWithUserAgent) }
+    private val st00re: St00reService by lazy { St00reServiceImpl(clientOptionsWithUserAgent) }
 
     private val users: UserService by lazy { UserServiceImpl(clientOptionsWithUserAgent) }
 
@@ -44,7 +44,7 @@ class JdProjectClientImpl(private val clientOptions: ClientOptions) : JdProjectC
 
     override fun pets(): PetService = pets
 
-    override fun st0re(): St0reService = st0re
+    override fun st00re(): St00reService = st00re
 
     override fun users(): UserService = users
 
@@ -57,8 +57,8 @@ class JdProjectClientImpl(private val clientOptions: ClientOptions) : JdProjectC
             PetServiceImpl.WithRawResponseImpl(clientOptions)
         }
 
-        private val st0re: St0reService.WithRawResponse by lazy {
-            St0reServiceImpl.WithRawResponseImpl(clientOptions)
+        private val st00re: St00reService.WithRawResponse by lazy {
+            St00reServiceImpl.WithRawResponseImpl(clientOptions)
         }
 
         private val users: UserService.WithRawResponse by lazy {
@@ -74,7 +74,7 @@ class JdProjectClientImpl(private val clientOptions: ClientOptions) : JdProjectC
 
         override fun pets(): PetService.WithRawResponse = pets
 
-        override fun st0re(): St0reService.WithRawResponse = st0re
+        override fun st00re(): St00reService.WithRawResponse = st00re
 
         override fun users(): UserService.WithRawResponse = users
     }
