@@ -4,7 +4,7 @@ package com.jd_project.api.client
 
 import com.jd_project.api.core.ClientOptions
 import com.jd_project.api.services.async.PetServiceAsync
-import com.jd_project.api.services.async.St000reServiceAsync
+import com.jd_project.api.services.async.St00000reServiceAsync
 import com.jd_project.api.services.async.UserServiceAsync
 import java.util.function.Consumer
 
@@ -46,7 +46,7 @@ interface JdProjectClientAsync {
 
     fun pets(): PetServiceAsync
 
-    fun st000re(): St000reServiceAsync
+    fun st00000re(): St00000reServiceAsync
 
     fun users(): UserServiceAsync
 
@@ -79,7 +79,7 @@ interface JdProjectClientAsync {
 
         fun pets(): PetServiceAsync.WithRawResponse
 
-        fun st000re(): St000reServiceAsync.WithRawResponse
+        fun st00000re(): St00000reServiceAsync.WithRawResponse
 
         fun users(): UserServiceAsync.WithRawResponse
     }

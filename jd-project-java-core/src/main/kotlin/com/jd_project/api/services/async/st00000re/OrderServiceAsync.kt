@@ -1,15 +1,15 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package com.jd_project.api.services.async.st000re
+package com.jd_project.api.services.async.st00000re
 
 import com.jd_project.api.core.ClientOptions
 import com.jd_project.api.core.RequestOptions
 import com.jd_project.api.core.http.HttpResponse
 import com.jd_project.api.core.http.HttpResponseFor
 import com.jd_project.api.models.Order
-import com.jd_project.api.models.st000re.orders.OrderCreateParams
-import com.jd_project.api.models.st000re.orders.OrderDeleteParams
-import com.jd_project.api.models.st000re.orders.OrderRetrieveParams
+import com.jd_project.api.models.st00000re.orders.OrderCreateParams
+import com.jd_project.api.models.st00000re.orders.OrderDeleteParams
+import com.jd_project.api.models.st00000re.orders.OrderRetrieveParams
 import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 
@@ -136,7 +136,7 @@ interface OrderServiceAsync {
         ): OrderServiceAsync.WithRawResponse
 
         /**
-         * Returns a raw HTTP response for `post /st000re/order`, but is otherwise the same as
+         * Returns a raw HTTP response for `post /st00000re/order`, but is otherwise the same as
          * [OrderServiceAsync.create].
          */
         fun create(): CompletableFuture<HttpResponseFor<Order>> = create(OrderCreateParams.none())
@@ -168,8 +168,8 @@ interface OrderServiceAsync {
             create(OrderCreateParams.none(), requestOptions)
 
         /**
-         * Returns a raw HTTP response for `get /st000re/order/{orderId}`, but is otherwise the same
-         * as [OrderServiceAsync.retrieve].
+         * Returns a raw HTTP response for `get /st00000re/order/{orderId}`, but is otherwise the
+         * same as [OrderServiceAsync.retrieve].
          */
         fun retrieve(orderId: Long): CompletableFuture<HttpResponseFor<Order>> =
             retrieve(orderId, OrderRetrieveParams.none())
@@ -207,7 +207,7 @@ interface OrderServiceAsync {
             retrieve(orderId, OrderRetrieveParams.none(), requestOptions)
 
         /**
-         * Returns a raw HTTP response for `delete /st000re/order/{orderId}`, but is otherwise the
+         * Returns a raw HTTP response for `delete /st00000re/order/{orderId}`, but is otherwise the
          * same as [OrderServiceAsync.delete].
          */
         fun delete(orderId: Long): CompletableFuture<HttpResponse> =
