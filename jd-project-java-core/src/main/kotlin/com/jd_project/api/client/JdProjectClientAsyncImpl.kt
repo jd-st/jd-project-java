@@ -6,8 +6,8 @@ import com.jd_project.api.core.ClientOptions
 import com.jd_project.api.core.getPackageVersion
 import com.jd_project.api.services.async.PetServiceAsync
 import com.jd_project.api.services.async.PetServiceAsyncImpl
-import com.jd_project.api.services.async.St0reServiceAsync
-import com.jd_project.api.services.async.St0reServiceAsyncImpl
+import com.jd_project.api.services.async.St00reServiceAsync
+import com.jd_project.api.services.async.St00reServiceAsyncImpl
 import com.jd_project.api.services.async.UserServiceAsync
 import com.jd_project.api.services.async.UserServiceAsyncImpl
 import java.util.function.Consumer
@@ -31,8 +31,8 @@ class JdProjectClientAsyncImpl(private val clientOptions: ClientOptions) : JdPro
 
     private val pets: PetServiceAsync by lazy { PetServiceAsyncImpl(clientOptionsWithUserAgent) }
 
-    private val st0re: St0reServiceAsync by lazy {
-        St0reServiceAsyncImpl(clientOptionsWithUserAgent)
+    private val st00re: St00reServiceAsync by lazy {
+        St00reServiceAsyncImpl(clientOptionsWithUserAgent)
     }
 
     private val users: UserServiceAsync by lazy { UserServiceAsyncImpl(clientOptionsWithUserAgent) }
@@ -46,7 +46,7 @@ class JdProjectClientAsyncImpl(private val clientOptions: ClientOptions) : JdPro
 
     override fun pets(): PetServiceAsync = pets
 
-    override fun st0re(): St0reServiceAsync = st0re
+    override fun st00re(): St00reServiceAsync = st00re
 
     override fun users(): UserServiceAsync = users
 
@@ -59,8 +59,8 @@ class JdProjectClientAsyncImpl(private val clientOptions: ClientOptions) : JdPro
             PetServiceAsyncImpl.WithRawResponseImpl(clientOptions)
         }
 
-        private val st0re: St0reServiceAsync.WithRawResponse by lazy {
-            St0reServiceAsyncImpl.WithRawResponseImpl(clientOptions)
+        private val st00re: St00reServiceAsync.WithRawResponse by lazy {
+            St00reServiceAsyncImpl.WithRawResponseImpl(clientOptions)
         }
 
         private val users: UserServiceAsync.WithRawResponse by lazy {
@@ -76,7 +76,7 @@ class JdProjectClientAsyncImpl(private val clientOptions: ClientOptions) : JdPro
 
         override fun pets(): PetServiceAsync.WithRawResponse = pets
 
-        override fun st0re(): St0reServiceAsync.WithRawResponse = st0re
+        override fun st00re(): St00reServiceAsync.WithRawResponse = st00re
 
         override fun users(): UserServiceAsync.WithRawResponse = users
     }

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package com.jd_project.api.services.async.st0re
+package com.jd_project.api.services.async.st00re
 
 import com.jd_project.api.core.ClientOptions
 import com.jd_project.api.core.RequestOptions
@@ -18,9 +18,9 @@ import com.jd_project.api.core.http.json
 import com.jd_project.api.core.http.parseable
 import com.jd_project.api.core.prepareAsync
 import com.jd_project.api.models.Order
-import com.jd_project.api.models.st0re.orders.OrderCreateParams
-import com.jd_project.api.models.st0re.orders.OrderDeleteParams
-import com.jd_project.api.models.st0re.orders.OrderRetrieveParams
+import com.jd_project.api.models.st00re.orders.OrderCreateParams
+import com.jd_project.api.models.st00re.orders.OrderDeleteParams
+import com.jd_project.api.models.st00re.orders.OrderRetrieveParams
 import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 import kotlin.jvm.optionals.getOrNull
@@ -41,21 +41,21 @@ class OrderServiceAsyncImpl internal constructor(private val clientOptions: Clie
         params: OrderCreateParams,
         requestOptions: RequestOptions,
     ): CompletableFuture<Order> =
-        // post /st0re/order
+        // post /st00re/order
         withRawResponse().create(params, requestOptions).thenApply { it.parse() }
 
     override fun retrieve(
         params: OrderRetrieveParams,
         requestOptions: RequestOptions,
     ): CompletableFuture<Order> =
-        // get /st0re/order/{orderId}
+        // get /st00re/order/{orderId}
         withRawResponse().retrieve(params, requestOptions).thenApply { it.parse() }
 
     override fun delete(
         params: OrderDeleteParams,
         requestOptions: RequestOptions,
     ): CompletableFuture<Void?> =
-        // delete /st0re/order/{orderId}
+        // delete /st00re/order/{orderId}
         withRawResponse().delete(params, requestOptions).thenAccept {}
 
     class WithRawResponseImpl internal constructor(private val clientOptions: ClientOptions) :
@@ -81,7 +81,7 @@ class OrderServiceAsyncImpl internal constructor(private val clientOptions: Clie
                 HttpRequest.builder()
                     .method(HttpMethod.POST)
                     .baseUrl(clientOptions.baseUrl())
-                    .addPathSegments("st0re", "order")
+                    .addPathSegments("st00re", "order")
                     .apply { params._body().ifPresent { body(json(clientOptions.jsonMapper, it)) } }
                     .build()
                     .prepareAsync(clientOptions, params)
@@ -114,7 +114,7 @@ class OrderServiceAsyncImpl internal constructor(private val clientOptions: Clie
                 HttpRequest.builder()
                     .method(HttpMethod.GET)
                     .baseUrl(clientOptions.baseUrl())
-                    .addPathSegments("st0re", "order", params._pathParam(0))
+                    .addPathSegments("st00re", "order", params._pathParam(0))
                     .build()
                     .prepareAsync(clientOptions, params)
             val requestOptions = requestOptions.applyDefaults(RequestOptions.from(clientOptions))
@@ -146,7 +146,7 @@ class OrderServiceAsyncImpl internal constructor(private val clientOptions: Clie
                 HttpRequest.builder()
                     .method(HttpMethod.DELETE)
                     .baseUrl(clientOptions.baseUrl())
-                    .addPathSegments("st0re", "order", params._pathParam(0))
+                    .addPathSegments("st00re", "order", params._pathParam(0))
                     .apply { params._body().ifPresent { body(json(clientOptions.jsonMapper, it)) } }
                     .build()
                     .prepareAsync(clientOptions, params)
