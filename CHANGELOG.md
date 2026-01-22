@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0 (2026-01-22)
+
+Full Changelog: [v0.4.0...v0.5.0](https://github.com/jd-st/jd-project-java/compare/v0.4.0...v0.5.0)
+
+### Features
+
+* **client:** send `X-Stainless-Kotlin-Version` header ([4287841](https://github.com/jd-st/jd-project-java/commit/4287841c71d815e3a5c0122827cb4165b856da56))
+
+
+### Chores
+
+* **internal:** update maven repo doc to include authentication ([e574f43](https://github.com/jd-st/jd-project-java/commit/e574f43e557a98518eb2a6ad2de0c028e5d7ebe7))
+
 ## 0.4.0 (2026-01-20)
 
 Full Changelog: [v0.3.0...v0.4.0](https://github.com/jd-st/jd-project-java/compare/v0.3.0...v0.4.0)
