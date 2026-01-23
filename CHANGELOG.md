@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.5.1 (2026-01-23)
+
+Full Changelog: [v0.5.0...v0.5.1](https://github.com/jd-st/jd-project-java/compare/v0.5.0...v0.5.1)
+
+### Bug Fixes
+
+* **client:** preserve time zone in lenient date-time parsing ([f1d7109](https://github.com/jd-st/jd-project-java/commit/f1d7109e8c4d4252904d64b002a896a1de439131))
+* **tests:** add missing query/header params ([4f40e73](https://github.com/jd-st/jd-project-java/commit/4f40e7368f5639221e85af92f7d359f55485a101))
+
+
+### Chores
+
+* **internal:** correct cache invalidation for `SKIP_MOCK_TESTS` ([309b895](https://github.com/jd-st/jd-project-java/commit/309b8954b28153f2c921bab191614f497d9873e6))
+
 ## 0.5.0 (2026-01-22)
 
 Full Changelog: [v0.4.0...v0.5.0](https://github.com/jd-st/jd-project-java/compare/v0.4.0...v0.5.0)
