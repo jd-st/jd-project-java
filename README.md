@@ -2,8 +2,8 @@
 
 <!-- x-release-please-start-version -->
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.jd_project.api/jd-project-java)](https://central.sonatype.com/artifact/com.jd_project.api/jd-project-java/0.5.0)
-[![javadoc](https://javadoc.io/badge2/com.jd_project.api/jd-project-java/0.5.0/javadoc.svg)](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.5.0)
+[![Maven Central](https://img.shields.io/maven-central/v/com.jd_project.api/jd-project-java)](https://central.sonatype.com/artifact/com.jd_project.api/jd-project-java/0.5.1)
+[![javadoc](https://javadoc.io/badge2/com.jd_project.api/jd-project-java/0.5.1/javadoc.svg)](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.5.1)
 
 <!-- x-release-please-end -->
 
@@ -15,7 +15,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 <!-- x-release-please-start-version -->
 
-Javadocs are available on [javadoc.io](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.5.0).
+Javadocs are available on [javadoc.io](https://javadoc.io/doc/com.jd_project.api/jd-project-java/0.5.1).
 
 <!-- x-release-please-end -->
 
@@ -26,7 +26,7 @@ Javadocs are available on [javadoc.io](https://javadoc.io/doc/com.jd_project.api
 ### Gradle
 
 ```kotlin
-implementation("com.jd_project.api:jd-project-java:0.5.0")
+implementation("com.jd_project.api:jd-project-java:0.5.1")
 ```
 
 ### Maven
@@ -35,7 +35,7 @@ implementation("com.jd_project.api:jd-project-java:0.5.0")
 <dependency>
   <groupId>com.jd_project.api</groupId>
   <artifactId>jd-project-java</artifactId>
-  <version>0.5.0</version>
+  <version>0.5.1</version>
 </dependency>
 ```
 
