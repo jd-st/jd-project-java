@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.2 (2026-01-24)
+
+Full Changelog: [v0.5.1...v0.5.2](https://github.com/jd-st/jd-project-java/compare/v0.5.1...v0.5.2)
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([02fde7d](https://github.com/jd-st/jd-project-java/commit/02fde7d4db344415d52e8606b1b7baee63e89981))
+
 ## 0.5.1 (2026-01-23)
 
 Full Changelog: [v0.5.0...v0.5.1](https://github.com/jd-st/jd-project-java/compare/v0.5.0...v0.5.1)
