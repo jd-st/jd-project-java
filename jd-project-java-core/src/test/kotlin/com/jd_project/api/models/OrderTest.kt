@@ -14,20 +14,20 @@ internal class OrderTest {
     fun create() {
         val order =
             Order.builder()
-                .id(10L)
+                .id(1L)
                 .complete(true)
-                .petId(198772L)
-                .quantity(7)
+                .petId(1L)
+                .quantity(1)
                 .shipDate(OffsetDateTime.parse("2019-12-27T18:11:19.117Z"))
-                .status(Order.Status.APPROVED)
+                .status(Order.Status.PLACED)
                 .build()
 
-        assertThat(order.id()).contains(10L)
+        assertThat(order.id()).contains(1L)
         assertThat(order.complete()).contains(true)
-        assertThat(order.petId()).contains(198772L)
-        assertThat(order.quantity()).contains(7)
+        assertThat(order.petId()).contains(1L)
+        assertThat(order.quantity()).contains(1)
         assertThat(order.shipDate()).contains(OffsetDateTime.parse("2019-12-27T18:11:19.117Z"))
-        assertThat(order.status()).contains(Order.Status.APPROVED)
+        assertThat(order.status()).contains(Order.Status.PLACED)
     }
 
     @Test
@@ -35,12 +35,12 @@ internal class OrderTest {
         val jsonMapper = jsonMapper()
         val order =
             Order.builder()
-                .id(10L)
+                .id(1L)
                 .complete(true)
-                .petId(198772L)
-                .quantity(7)
+                .petId(1L)
+                .quantity(1)
                 .shipDate(OffsetDateTime.parse("2019-12-27T18:11:19.117Z"))
-                .status(Order.Status.APPROVED)
+                .status(Order.Status.PLACED)
                 .build()
 
         val roundtrippedOrder =
