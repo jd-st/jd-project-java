@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.6.0 (2026-02-19)
+
+Full Changelog: [v0.5.1...v0.6.0](https://github.com/jd-st/jd-project-java/compare/v0.5.1...v0.6.0)
+
+### Features
+
+* **client:** add connection pooling option ([22a15e5](https://github.com/jd-st/jd-project-java/commit/22a15e59d99482706b76cad8d0548284854e76f4))
+* **client:** add more convenience service method overloads ([2a10a5f](https://github.com/jd-st/jd-project-java/commit/2a10a5fc9a4e8de448bd6d690e122a27465543e2))
+
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([02fde7d](https://github.com/jd-st/jd-project-java/commit/02fde7d4db344415d52e8606b1b7baee63e89981))
+* **internal:** allow passing args to `./scripts/test` ([88019da](https://github.com/jd-st/jd-project-java/commit/88019daac06bc38d456e757f07253cae1ab8cc93))
+* **internal:** codegen related update ([ebc761d](https://github.com/jd-st/jd-project-java/commit/ebc761dc46405a9d900eedd7cb157da315b7b04a))
+* **internal:** make `OkHttp` constructor internal ([f7c5cab](https://github.com/jd-st/jd-project-java/commit/f7c5caba9dcc5a459dfef2603ca901cb2fbda030))
+* **internal:** update `TestServerExtension` comment ([4664ea6](https://github.com/jd-st/jd-project-java/commit/4664ea6298f292e24b8c958fb131b8674d5c46fe))
+* **internal:** upgrade AssertJ ([2b385e4](https://github.com/jd-st/jd-project-java/commit/2b385e49f0b19b0362177b8d8395e402b6bcdf89))
+
 ## 0.5.1 (2026-01-23)
 
 Full Changelog: [v0.5.0...v0.5.1](https://github.com/jd-st/jd-project-java/compare/v0.5.0...v0.5.1)
