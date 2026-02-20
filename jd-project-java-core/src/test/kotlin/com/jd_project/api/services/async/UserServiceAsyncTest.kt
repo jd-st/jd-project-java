@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 
 internal class UserServiceAsyncTest {
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun create() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -35,7 +35,7 @@ internal class UserServiceAsyncTest {
         user.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun retrieve() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -47,7 +47,7 @@ internal class UserServiceAsyncTest {
         user.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun update() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -75,7 +75,7 @@ internal class UserServiceAsyncTest {
         val response = future.get()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun delete() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -86,7 +86,7 @@ internal class UserServiceAsyncTest {
         val response = future.get()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun createWithList() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -112,7 +112,7 @@ internal class UserServiceAsyncTest {
         user.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun login() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -126,7 +126,7 @@ internal class UserServiceAsyncTest {
         val response = responseFuture.get()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun logout() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()

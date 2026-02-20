@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test
 
 internal class PetServiceAsyncTest {
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun create() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -36,7 +36,7 @@ internal class PetServiceAsyncTest {
         pet.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun retrieve() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -48,7 +48,7 @@ internal class PetServiceAsyncTest {
         pet.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun update() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -70,7 +70,7 @@ internal class PetServiceAsyncTest {
         pet.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun delete() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -81,7 +81,7 @@ internal class PetServiceAsyncTest {
         val response = future.get()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun findByStatus() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -98,7 +98,7 @@ internal class PetServiceAsyncTest {
         pets.forEach { it.validate() }
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun findByTags() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -111,7 +111,7 @@ internal class PetServiceAsyncTest {
         pets.forEach { it.validate() }
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun updateById() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -125,7 +125,7 @@ internal class PetServiceAsyncTest {
         val response = future.get()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun uploadImage() {
         val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
