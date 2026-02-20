@@ -2,7 +2,6 @@
 
 package com.jd_project.api.services.async
 
-import com.jd_project.api.TestServerExtension
 import com.jd_project.api.client.okhttp.JdProjectOkHttpClientAsync
 import com.jd_project.api.models.pets.Category
 import com.jd_project.api.models.pets.Pet
@@ -12,19 +11,13 @@ import com.jd_project.api.models.pets.PetUpdateByIdParams
 import com.jd_project.api.models.pets.PetUploadImageParams
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 
-@ExtendWith(TestServerExtension::class)
 internal class PetServiceAsyncTest {
 
     @Disabled("Prism tests are disabled")
     @Test
     fun create() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val petFuture =
@@ -46,11 +39,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun retrieve() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val petFuture = petServiceAsync.retrieve(0L)
@@ -62,11 +51,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun update() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val petFuture =
@@ -88,11 +73,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun delete() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val future = petServiceAsync.delete(0L)
@@ -103,11 +84,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun findByStatus() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val petsFuture =
@@ -124,11 +101,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun findByTags() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val petsFuture =
@@ -141,11 +114,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun updateById() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val future =
@@ -159,11 +128,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun uploadImage() {
-        val client =
-            JdProjectOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = JdProjectOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val responseFuture =
