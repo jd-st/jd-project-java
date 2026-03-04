@@ -25,6 +25,7 @@ import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 import kotlin.jvm.optionals.getOrNull
 
+/** Access to Petstore orders */
 class OrderServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
     OrderServiceAsync {
 

@@ -24,6 +24,7 @@ import com.jd_project.api.models.st00000re.orders.OrderRetrieveParams
 import java.util.function.Consumer
 import kotlin.jvm.optionals.getOrNull
 
+/** Access to Petstore orders */
 class OrderServiceImpl internal constructor(private val clientOptions: ClientOptions) :
     OrderService {
 

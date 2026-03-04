@@ -30,6 +30,7 @@ import com.jd_project.api.models.pets.PetUploadImageResponse
 import java.util.function.Consumer
 import kotlin.jvm.optionals.getOrNull
 
+/** Everything about your Pets */
 class PetServiceImpl internal constructor(private val clientOptions: ClientOptions) : PetService {
 
     private val withRawResponse: PetService.WithRawResponse by lazy {
