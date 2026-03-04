@@ -21,6 +21,7 @@ import com.jd_project.api.services.async.st00000re.OrderServiceAsyncImpl
 import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 
+/** Access to Petstore orders */
 class St00000reServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
     St00000reServiceAsync {
 
@@ -35,6 +36,7 @@ class St00000reServiceAsyncImpl internal constructor(private val clientOptions: 
     override fun withOptions(modifier: Consumer<ClientOptions.Builder>): St00000reServiceAsync =
         St00000reServiceAsyncImpl(clientOptions.toBuilder().apply(modifier::accept).build())
 
+    /** Access to Petstore orders */
     override fun orders(): OrderServiceAsync = orders
 
     override fun listInventory(
@@ -61,6 +63,7 @@ class St00000reServiceAsyncImpl internal constructor(private val clientOptions: 
                 clientOptions.toBuilder().apply(modifier::accept).build()
             )
 
+        /** Access to Petstore orders */
         override fun orders(): OrderServiceAsync.WithRawResponse = orders
 
         private val listInventoryHandler: Handler<St00000reListInventoryResponse> =

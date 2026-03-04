@@ -11,6 +11,7 @@ import com.jd_project.api.services.async.st00000re.OrderServiceAsync
 import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 
+/** Access to Petstore orders */
 interface St00000reServiceAsync {
 
     /**
@@ -25,6 +26,7 @@ interface St00000reServiceAsync {
      */
     fun withOptions(modifier: Consumer<ClientOptions.Builder>): St00000reServiceAsync
 
+    /** Access to Petstore orders */
     fun orders(): OrderServiceAsync
 
     /** Returns a map of status codes to quantities */
@@ -63,6 +65,7 @@ interface St00000reServiceAsync {
             modifier: Consumer<ClientOptions.Builder>
         ): St00000reServiceAsync.WithRawResponse
 
+        /** Access to Petstore orders */
         fun orders(): OrderServiceAsync.WithRawResponse
 
         /**

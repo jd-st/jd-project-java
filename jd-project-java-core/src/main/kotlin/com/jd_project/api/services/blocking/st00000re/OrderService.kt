@@ -13,6 +13,7 @@ import com.jd_project.api.models.st00000re.orders.OrderDeleteParams
 import com.jd_project.api.models.st00000re.orders.OrderRetrieveParams
 import java.util.function.Consumer
 
+/** Access to Petstore orders */
 interface OrderService {
 
     /**

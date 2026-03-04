@@ -17,6 +17,7 @@ import com.jd_project.api.models.users.UserRetrieveParams
 import com.jd_project.api.models.users.UserUpdateParams
 import java.util.function.Consumer
 
+/** Operations about user */
 interface UserService {
 
     /**

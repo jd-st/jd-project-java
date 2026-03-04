@@ -44,10 +44,13 @@ interface JdProjectClient {
      */
     fun withOptions(modifier: Consumer<ClientOptions.Builder>): JdProjectClient
 
+    /** Everything about your Pets */
     fun pets(): PetService
 
+    /** Access to Petstore orders */
     fun st00000re(): St00000reService
 
+    /** Operations about user */
     fun users(): UserService
 
     /**
@@ -73,10 +76,13 @@ interface JdProjectClient {
          */
         fun withOptions(modifier: Consumer<ClientOptions.Builder>): JdProjectClient.WithRawResponse
 
+        /** Everything about your Pets */
         fun pets(): PetService.WithRawResponse
 
+        /** Access to Petstore orders */
         fun st00000re(): St00000reService.WithRawResponse
 
+        /** Operations about user */
         fun users(): UserService.WithRawResponse
     }
 }
