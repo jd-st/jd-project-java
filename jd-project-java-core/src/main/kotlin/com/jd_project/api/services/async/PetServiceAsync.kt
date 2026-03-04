@@ -19,6 +19,7 @@ import com.jd_project.api.models.pets.PetUploadImageResponse
 import java.util.concurrent.CompletableFuture
 import java.util.function.Consumer
 
+/** Everything about your Pets */
 interface PetServiceAsync {
 
     /**

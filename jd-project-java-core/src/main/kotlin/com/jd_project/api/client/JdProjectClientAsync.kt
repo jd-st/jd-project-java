@@ -44,10 +44,13 @@ interface JdProjectClientAsync {
      */
     fun withOptions(modifier: Consumer<ClientOptions.Builder>): JdProjectClientAsync
 
+    /** Everything about your Pets */
     fun pets(): PetServiceAsync
 
+    /** Access to Petstore orders */
     fun st00000re(): St00000reServiceAsync
 
+    /** Operations about user */
     fun users(): UserServiceAsync
 
     /**
@@ -77,10 +80,13 @@ interface JdProjectClientAsync {
             modifier: Consumer<ClientOptions.Builder>
         ): JdProjectClientAsync.WithRawResponse
 
+        /** Everything about your Pets */
         fun pets(): PetServiceAsync.WithRawResponse
 
+        /** Access to Petstore orders */
         fun st00000re(): St00000reServiceAsync.WithRawResponse
 
+        /** Operations about user */
         fun users(): UserServiceAsync.WithRawResponse
     }
 }

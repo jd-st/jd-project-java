@@ -29,6 +29,7 @@ import com.jd_project.api.models.users.UserUpdateParams
 import java.util.function.Consumer
 import kotlin.jvm.optionals.getOrNull
 
+/** Operations about user */
 class UserServiceImpl internal constructor(private val clientOptions: ClientOptions) : UserService {
 
     private val withRawResponse: UserService.WithRawResponse by lazy {
