@@ -136,7 +136,7 @@ internal class PetServiceAsyncTest {
                 PetUploadImageParams.builder()
                     .petId(0L)
                     .additionalMetadata("additionalMetadata")
-                    .image("some content")
+                    .image("Example data")
                     .build()
             )
 
