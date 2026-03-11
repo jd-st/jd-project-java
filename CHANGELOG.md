@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.6.1 (2026-03-11)
+
+Full Changelog: [v0.6.0...v0.6.1](https://github.com/jd-st/jd-project-java/compare/v0.6.0...v0.6.1)
+
+### Bug Fixes
+
+* **client:** incorrect `Retry-After` parsing ([5889171](https://github.com/jd-st/jd-project-java/commit/5889171616f6df1235dc68e5461bdec82d755bfd))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([2230997](https://github.com/jd-st/jd-project-java/commit/2230997671cb7c0def93a39caadb90712e43c9d6))
+* drop apache dependency ([42b892c](https://github.com/jd-st/jd-project-java/commit/42b892c43c93be5a187f19ed07e450fcac4a1be4))
+* **internal:** bump palantir-java-format ([e591643](https://github.com/jd-st/jd-project-java/commit/e591643629df410677d0557bbbf5260d0b207794))
+* **internal:** codegen related update ([59fb4ff](https://github.com/jd-st/jd-project-java/commit/59fb4ff92e4b9d3e98e3ac52f182c148b0dcb981))
+* **internal:** codegen related update ([f18d32a](https://github.com/jd-st/jd-project-java/commit/f18d32ad069f166c5f6cd3dcc46c20a0792cb913))
+* **internal:** expand imports ([fcb247b](https://github.com/jd-st/jd-project-java/commit/fcb247b172b234d7c672bdf480eba41515ba7f0f))
+* **internal:** remove mock server code ([d7ec4fb](https://github.com/jd-st/jd-project-java/commit/d7ec4fb84cce99c0611e299853948fa9d27753f0))
+* make `Properties` more resilient to `null` ([1b1dda0](https://github.com/jd-st/jd-project-java/commit/1b1dda074a04f162c6ba2bc62738126edda34cf7))
+* update mock server docs ([0b72c3c](https://github.com/jd-st/jd-project-java/commit/0b72c3c8d67dae20c089205558d94ff3fb6a71b3))
+* update placeholder string ([2352c92](https://github.com/jd-st/jd-project-java/commit/2352c922609e15f6ceeb937adcdef1aee6e9e97e))
+
 ## 0.6.0 (2026-02-19)
 
 Full Changelog: [v0.5.1...v0.6.0](https://github.com/jd-st/jd-project-java/compare/v0.5.1...v0.6.0)
