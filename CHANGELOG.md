@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.2 (2026-03-18)
+
+Full Changelog: [v0.6.1...v0.6.2](https://github.com/jd-st/jd-project-java/compare/v0.6.1...v0.6.2)
+
+### Bug Fixes
+
+* **client:** allow updating header/query affecting fields in `toBuilder()` ([196b1fe](https://github.com/jd-st/jd-project-java/commit/196b1feb4852788fc87319bbf38461727ddbc65c))
+
+
+### Chores
+
+* **internal:** tweak CI branches ([9e5cbb3](https://github.com/jd-st/jd-project-java/commit/9e5cbb3ee6eb010984351bb13cebecb5c671ab3c))
+* **internal:** update retry delay tests ([c7ddfb1](https://github.com/jd-st/jd-project-java/commit/c7ddfb1e51bc985bc90e85080e07cf41e8e68434))
+
 ## 0.6.1 (2026-03-11)
 
 Full Changelog: [v0.6.0...v0.6.1](https://github.com/jd-st/jd-project-java/compare/v0.6.0...v0.6.1)
