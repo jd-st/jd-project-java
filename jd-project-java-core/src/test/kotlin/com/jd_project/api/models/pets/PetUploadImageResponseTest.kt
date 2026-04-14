@@ -12,18 +12,18 @@ internal class PetUploadImageResponseTest {
     @Test
     fun create() {
         val petUploadImageResponse =
-            PetUploadImageResponse.builder().code(1).message("take five").type("take five").build()
+            PetUploadImageResponse.builder().code(0).message("message").type("type").build()
 
-        assertThat(petUploadImageResponse.code()).contains(1)
-        assertThat(petUploadImageResponse.message()).contains("take five")
-        assertThat(petUploadImageResponse.type()).contains("take five")
+        assertThat(petUploadImageResponse.code()).contains(0)
+        assertThat(petUploadImageResponse.message()).contains("message")
+        assertThat(petUploadImageResponse.type()).contains("type")
     }
 
     @Test
     fun roundtrip() {
         val jsonMapper = jsonMapper()
         val petUploadImageResponse =
-            PetUploadImageResponse.builder().code(1).message("take five").type("take five").build()
+            PetUploadImageResponse.builder().code(0).message("message").type("type").build()
 
         val roundtrippedPetUploadImageResponse =
             jsonMapper.readValue(

@@ -23,12 +23,12 @@ internal class PetServiceAsyncTest {
         val petFuture =
             petServiceAsync.create(
                 Pet.builder()
-                    .name("take five")
-                    .addPhotoUrl("take five")
-                    .id(1L)
-                    .category(Category.builder().id(1L).name("take five").build())
+                    .name("doggie")
+                    .addPhotoUrl("string")
+                    .id(10L)
+                    .category(Category.builder().id(1L).name("Dogs").build())
                     .status(Pet.Status.AVAILABLE)
-                    .addTag(Pet.Tag.builder().id(1L).name("take five").build())
+                    .addTag(Pet.Tag.builder().id(0L).name("name").build())
                     .build()
             )
 
@@ -57,12 +57,12 @@ internal class PetServiceAsyncTest {
         val petFuture =
             petServiceAsync.update(
                 Pet.builder()
-                    .name("take five")
-                    .addPhotoUrl("take five")
-                    .id(1L)
-                    .category(Category.builder().id(1L).name("take five").build())
+                    .name("doggie")
+                    .addPhotoUrl("string")
+                    .id(10L)
+                    .category(Category.builder().id(1L).name("Dogs").build())
                     .status(Pet.Status.AVAILABLE)
-                    .addTag(Pet.Tag.builder().id(1L).name("take five").build())
+                    .addTag(Pet.Tag.builder().id(0L).name("name").build())
                     .build()
             )
 

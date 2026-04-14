@@ -14,21 +14,21 @@ internal class PetTest {
     fun create() {
         val pet =
             Pet.builder()
-                .name("take five")
-                .addPhotoUrl("take five")
-                .id(1L)
-                .category(Category.builder().id(1L).name("take five").build())
+                .name("doggie")
+                .addPhotoUrl("string")
+                .id(10L)
+                .category(Category.builder().id(1L).name("Dogs").build())
                 .status(Pet.Status.AVAILABLE)
-                .addTag(Pet.Tag.builder().id(1L).name("take five").build())
+                .addTag(Pet.Tag.builder().id(0L).name("name").build())
                 .build()
 
-        assertThat(pet.name()).isEqualTo("take five")
-        assertThat(pet.photoUrls()).containsExactly("take five")
-        assertThat(pet.id()).contains(1L)
-        assertThat(pet.category()).contains(Category.builder().id(1L).name("take five").build())
+        assertThat(pet.name()).isEqualTo("doggie")
+        assertThat(pet.photoUrls()).containsExactly("string")
+        assertThat(pet.id()).contains(10L)
+        assertThat(pet.category()).contains(Category.builder().id(1L).name("Dogs").build())
         assertThat(pet.status()).contains(Pet.Status.AVAILABLE)
         assertThat(pet.tags().getOrNull())
-            .containsExactly(Pet.Tag.builder().id(1L).name("take five").build())
+            .containsExactly(Pet.Tag.builder().id(0L).name("name").build())
     }
 
     @Test
@@ -36,12 +36,12 @@ internal class PetTest {
         val jsonMapper = jsonMapper()
         val pet =
             Pet.builder()
-                .name("take five")
-                .addPhotoUrl("take five")
-                .id(1L)
-                .category(Category.builder().id(1L).name("take five").build())
+                .name("doggie")
+                .addPhotoUrl("string")
+                .id(10L)
+                .category(Category.builder().id(1L).name("Dogs").build())
                 .status(Pet.Status.AVAILABLE)
-                .addTag(Pet.Tag.builder().id(1L).name("take five").build())
+                .addTag(Pet.Tag.builder().id(0L).name("name").build())
                 .build()
 
         val roundtrippedPet =
