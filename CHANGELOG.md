@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.7.0 (2026-04-28)
+
+Full Changelog: [v0.6.2...v0.7.0](https://github.com/jd-st/jd-project-java/compare/v0.6.2...v0.7.0)
+
+### Features
+
+* support setting headers via env ([74c1d64](https://github.com/jd-st/jd-project-java/commit/74c1d6461f891e8e972114be43b41f4d847d8a00))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([52a10c0](https://github.com/jd-st/jd-project-java/commit/52a10c062fb31a4a7e743c72153d7a9b349fb923))
+* **internal:** bump ktfmt ([d97b9d7](https://github.com/jd-st/jd-project-java/commit/d97b9d74f1f359aa679a75f20177d54976a09d8b))
+* **internal:** codegen related update ([472c311](https://github.com/jd-st/jd-project-java/commit/472c311b9415ba2c2554fc24bc77efc907453ad7))
+* **internal:** update gitignore ([08b6010](https://github.com/jd-st/jd-project-java/commit/08b60108e6ea5c3b426aa1bc38a37e19752b174b))
+
 ## 0.6.2 (2026-03-18)
 
 Full Changelog: [v0.6.1...v0.6.2](https://github.com/jd-st/jd-project-java/compare/v0.6.1...v0.6.2)
