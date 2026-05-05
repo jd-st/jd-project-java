@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.8.0 (2026-05-05)
+
+Full Changelog: [v0.7.0...v0.8.0](https://github.com/jd-st/jd-project-java/compare/v0.7.0...v0.8.0)
+
+### Features
+
+* **client:** more robust error parsing ([e22d45a](https://github.com/jd-st/jd-project-java/commit/e22d45a10a9696318d70dd40918e81545e6ae96d))
+
+
+### Chores
+
+* remove duplicated dokka setup ([b940376](https://github.com/jd-st/jd-project-java/commit/b94037613e52a978537182f0df02592501f9d407))
+
+
+### Documentation
+
+* clarify forwards compat behavior ([264a08e](https://github.com/jd-st/jd-project-java/commit/264a08e9775d4ff41049ad6781ba25463a92079e))
+
 ## 0.7.0 (2026-04-28)
 
 Full Changelog: [v0.6.2...v0.7.0](https://github.com/jd-st/jd-project-java/compare/v0.6.2...v0.7.0)
