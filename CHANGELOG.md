@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.10.0 (2026-05-08)
+
+Full Changelog: [v0.9.0...v0.10.0](https://github.com/jd-st/jd-project-java/compare/v0.9.0...v0.10.0)
+
+### Features
+
+* **client:** improve logging ([20cfeb2](https://github.com/jd-st/jd-project-java/commit/20cfeb29ff075e9c37332a539603252dc61e0696))
+
+
+### Chores
+
+* redact api-key headers in debug logs ([c37b680](https://github.com/jd-st/jd-project-java/commit/c37b680692aef983416acbf7b1c23b51240ac61a))
+
 ## 0.9.0 (2026-05-06)
 
 Full Changelog: [v0.8.0...v0.9.0](https://github.com/jd-st/jd-project-java/compare/v0.8.0...v0.9.0)
