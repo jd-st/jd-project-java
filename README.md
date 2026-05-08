@@ -229,8 +229,6 @@ The SDK throws custom unchecked exception types:
 
 ## Logging
 
-The SDK uses the standard [OkHttp logging interceptor](https://github.com/square/okhttp/tree/master/okhttp-logging-interceptor).
-
 Enable logging by setting the `JD_PROJECT_LOG` environment variable to `info`:
 
 ```sh
@@ -241,6 +239,19 @@ Or to `debug` for more verbose logging:
 
 ```sh
 export JD_PROJECT_LOG=debug
+```
+
+Or configure the client manually using the `logLevel` method:
+
+```java
+import com.jd_project.api.client.JdProjectClient;
+import com.jd_project.api.client.okhttp.JdProjectOkHttpClient;
+import com.jd_project.api.core.LogLevel;
+
+JdProjectClient client = JdProjectOkHttpClient.builder()
+    .fromEnv()
+    .logLevel(LogLevel.INFO)
+    .build();
 ```
 
 ## ProGuard and R8
